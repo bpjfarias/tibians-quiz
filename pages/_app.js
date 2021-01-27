@@ -1,5 +1,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import db from '../db.json'
+import Cabecalho from './src/components/Cabecalho'
+
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -27,6 +29,7 @@ const theme = db.theme
 export default function App({ Component, pageProps }) {
   return (
     <>
+    <Cabecalho />
       <ThemeProvider theme={theme}>
       <GlobalStyle />
         <Component {...pageProps} />
