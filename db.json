@@ -1,6 +1,6 @@
 {
   "bg": "https://www.tibiawiki.com.br/images/a/a0/Client_Artwork_12.40.jpg",
-  "imageThumb": "../../images/Thumbnail/TibiaDragonLogo_HighRes.png",
+  "imageThumb": "https://static.tibia.com/images/global/header/tibia-logo-artwork-top.gif",
   "title": "Tibians Quiz",
   "description": "Teste seus conhecimentos neste quiz do clássico MMORPG da internet!",
   "questions": [
