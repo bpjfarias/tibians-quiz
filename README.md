@@ -1,78 +1,70 @@
-# Example app with styled-components
+# Immersion React and Next.Js with deploy on Vercel by Alura [File:React-icon.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/100px-React-icon.svg.png)[File:Nextjs-logo.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/100px-Nextjs-logo.svg.png) [File:vercel-logo.svg](https://badgen-sponsors.now.sh/vercel.svg)
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
+# About the immersion
 
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
+The objective of this immersion is develop an application of a Quiz, any chosen theme, using stacks as React, Next.js and Styled Components
 
-## Deploy your own
+## About my project
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+My quiz was based in a computer game named Tibia, it is a MMORPG, that I used to play a long time ago. Check this out [here](https://tibians-quiz.vercel.app/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+## First class
 
-## How to use
+In this first class of **React** I created a home page and put it on-line with Vercel's help! I used **styled-components** to create components with style and some resources of **Next.js** to generate the initial code of project and generate the build files.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+<details><summary><b>Detailed content of the first class</b></summary>
 
-```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
-```
+- Start a project with boilerplate of React with Next.js and styled.components
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- Create some components React using styled-componentes
 
-### Try it on CodeSandbox
+- Implement a theme to the interface
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+- Provide the questionnaire theme and data information through a mocked database
 
-### Notes
+- Use Next.js to create a tag `<head>` and the necessaire meta-infos 
 
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
+- Publish on the Vercel
 
-<details>
-<summary>Click to expand workaround example</summary>
-<br />
+  </details>
 
-**components/StyledLink.js**
+## Second class
 
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
+I learned how to work with states of **React** trought **React hooks**, I understood what is a **SPA** (Single Page Application), I created routes inside our application, I used **ESLint** and I evolved  components. 
 
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
+<details><summary><b>Detailed content of the second class</b></summary>
 
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
+- Install and run ESLint, a linting lib to JavaScript.
 
-  &:hover {
-    color: #40a9ff;
-  }
+- Understand what is a SPA
 
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
-```
+- Create complex components with styled-components
 
-**pages/index.js**
+- Use props with components
 
-```javascript
-import StyledLink from '../components/StyledLink'
+- Capture some events in forms (as click)
 
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
-```
+- Manager states of components with hooks
 
-</details>
+- Give some datas in URLs by `query params`
+
+- Use `next/router` to implement routes
+
+  </details>
+
+### 💻 Stack
+
+- React
+- Next.Js
+- Styled Components
+- JavaScript
+- ESLint
+- Vercel
+
+### Let's code! 🚀
+
+Made with care by **Brayan Farias**. Connect with me on [Linkedin!](https://www.linkedin.com/in/ricardoltt/)
+
+**All contents and rights of [Tibia](https://www.tibia.com/news/?subtopic=latestnews) belongs to CipSoft GmbH**
+**This README. md is an adaptation from [@ricardoltt](https://github.com/ricardoltt) on his project aluraquiz-contemplese. You can check it [here](https://github.com/ricardoltt/aluraquiz-contemplese)**
+
