@@ -20,23 +20,28 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
-        < Widget>
-          <Widget.Content>
+        < Widget>   
+
             <Widget.Header>
-            <h1>Widget 1 </h1>
+            <h1>{db.title}</h1>
             </Widget.Header>
-            <p>Algum texto sobre o Widget 1</p>
+
+            <Widget.Content>
+            <p>{db.description}</p>
           </Widget.Content>
+          
         </Widget>
 
-        < Widget>
-          <Widget.Content>
-            <Widget.Header>
-            <h1>Widget 2</h1>
-            </Widget.Header>
-            <p>Algum texto sobre o Widget 2</p>
+        < Widget>    
 
+            <Widget.Header>
+            <h1>Quizes da galera</h1>
+            </Widget.Header>
+
+            <Widget.Content>
+            <p>Em breve aqui aparecerão os quizes de quem também fez a semana da Alura!</p>
           </Widget.Content>
+
         </Widget>
         <Footer />
       </QuizContainer>
