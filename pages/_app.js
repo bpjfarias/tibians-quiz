@@ -1,6 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import db from '../db.json'
-import Cabecalho from './src/components/Cabecalho'
+import Head from './src/components/Head'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -29,7 +29,7 @@ const theme = db.theme
 export default function App({ Component, pageProps }) {
   return (
     <>
-    <Cabecalho />
+    <Head title={db.title} description={db.description} bg={db.imageThumb} />
       <ThemeProvider theme={theme}>
       <GlobalStyle />
         <Component {...pageProps} />
