@@ -4,6 +4,7 @@ import Widget from './src/components/Widget'
 import Footer from './src/components/Footer'
 import GitHubCorner from './src/components/GitHubCorner'
 import QuizBackground from './src/components/QuizBackground'
+import Title from './src/components/Title'
 
 const QuizContainer = styled.div`
   width: 100%;
@@ -19,6 +20,7 @@ const QuizContainer = styled.div`
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <Title />
       <QuizContainer>
         < Widget>
           <Widget.Content>
