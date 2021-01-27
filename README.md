@@ -1,4 +1,6 @@
-# Immersion React and Next.Js with deploy on Vercel by Alura ![File:React-icon.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/100px-React-icon.svg.png)![File:Nextjs-logo.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/100px-Nextjs-logo.svg.png) ![File:vercel-logo.svg](https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png)
+# Immersion React and Next.Js with deploy on Vercel by Alura
+<br />
+![File:React-icon.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/100px-React-icon.svg.png)![File:Nextjs-logo.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/100px-Nextjs-logo.svg.png) ![File:vercel-logo.svg](https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png)
 
 # About the immersion
 
@@ -66,6 +68,6 @@ I learned how to work with states of **React** trought **React hooks**, I unders
 Made with care by **Brayan Farias**. Connect with me on [Linkedin!](https://www.linkedin.com/in/ricardoltt/)
 
 ### Disclaimer 
-All contents and rights of [Tibia](https://www.tibia.com/news/?subtopic=latestnews) belongs to CipSoft GmbH. 
-This README. md is an adaptation from [@ricardoltt](https://github.com/ricardoltt) on his project aluraquiz-contemplese. You can check it [here](https://github.com/ricardoltt/aluraquiz-contemplese)
+All contents and rights of [Tibia](https://www.tibia.com/news/?subtopic=latestnews) belongs to CipSoft GmbH.<br />
+My README is an adaptation from [@ricardoltt](https://github.com/ricardoltt) on his project [aluraquiz-contemplese.](https://github.com/ricardoltt/aluraquiz-contemplese)
 
