@@ -1,6 +1,4 @@
 # Immersion React and Next.Js with deploy on Vercel by Alura
-<br />
-![File:React-icon.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/100px-React-icon.svg.png)![File:Nextjs-logo.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/100px-Nextjs-logo.svg.png) ![File:vercel-logo.svg](https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png)
 
 # About the immersion
 
