@@ -10,7 +10,7 @@ My quiz was based in a computer game named Tibia, it is a MMORPG, that I used to
 
 ## First class
 
-In this first class of **React** I created a home page and put it on-line with Vercel's help! I used **styled-components** to create components with style and some resources of **Next.js** to generate the initial code of project and generate the build files.
+In this first **React** class I created a home page and put it on-line with Vercel's help! I used **styled-components** to create components with style and some resources of **Next.js** to generate the initial code of project and generate the build files.
 
 <details><summary><b>Detailed content of the first class</b></summary>
 
@@ -30,7 +30,7 @@ In this first class of **React** I created a home page and put it on-line with V
 
 ## Second class
 
-I learned how to work with states of **React** trought **React hooks**, I understood what is a **SPA** (Single Page Application), I created routes inside our application, I used **ESLint** and I evolved  components. 
+I learned how to work with states of **React** trought **React hooks**, I learned what is a **SPA** (Single Page Application), I created routes inside our application, I used **ESLint** and I evolved  components. 
 
 <details><summary><b>Detailed content of the second class</b></summary>
 
