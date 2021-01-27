@@ -2,19 +2,19 @@
 
 # About the immersion
 
-The objective of this immersion is develop an application of a Quiz, any chosen theme, using stacks as React, Next.js and Styled Components
+The goal of this immersion is to develop an application of a Quiz - any chosen theme - using React, Next.js and Styled Components as some of the main stacks
 
 ## About my project
 
-My quiz was based in a computer game named Tibia, it is a MMORPG, that I used to play a long time ago. Check this out [here](https://tibians-quiz.vercel.app/)
+My quiz is based in a computer game named Tibia. It is a MMORPG that I used to play a long time ago. Check it out [here](https://tibians-quiz.vercel.app/)
 
 ## First class
 
-In this first **React** class I created a home page and put it on-line with Vercel's help! I used **styled-components** to create components with style and some resources of **Next.js** to generate the initial code of project and generate the build files.
+I started the project creating a home page using **React** and put it on-line with Vercel's help! I used **styled-components** to create components, some resources of **Next.js** to generate the initial code of the project and generate the build files.
 
 <details><summary><b>Detailed content of the first class</b></summary>
 
-- Start a project with boilerplate of React with Next.js and styled.components
+- Start a project with a boilerplate of React with Next.js and styled.components
 
 - Create some components React using styled-componentes
 
@@ -22,21 +22,21 @@ In this first **React** class I created a home page and put it on-line with Verc
 
 - Provide the questionnaire theme and data information through a mocked database
 
-- Use Next.js to create a tag `<head>` and the necessaire meta-infos 
+- Use Next.js to create a tag `<head>` and the needed meta-infos 
 
-- Publish on the Vercel
+- Publish it on the Vercel
 
   </details>
 
 ## Second class
 
-I learned how to work with states of **React** trought **React hooks**, I learned what is a **SPA** (Single Page Application), I created routes inside our application, I used **ESLint** and I evolved  components. 
+I learned how to work with states of **React** trought **React hooks**, learned what is a **SPA** (Single Page Application), created routes inside our application, used **ESLint** and evolved  components. 
 
 <details><summary><b>Detailed content of the second class</b></summary>
 
 - Install and run ESLint, a linting lib to JavaScript.
 
-- Understand what is a SPA
+- Understand what is an SPA
 
 - Create complex components with styled-components
 
@@ -46,7 +46,7 @@ I learned how to work with states of **React** trought **React hooks**, I learne
 
 - Manager states of components with hooks
 
-- Give some datas in URLs by `query params`
+- Give some data in URLs by `query params`
 
 - Use `next/router` to implement routes
 
