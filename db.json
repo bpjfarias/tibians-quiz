@@ -1,7 +1,8 @@
 {
   "bg": "https://www.tibiawiki.com.br/images/a/a0/Client_Artwork_12.40.jpg",
-  "title": "Quiz de tibiano nato",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "imageThumb": "../../images/Thumbnail/TibiaDragonLogo_HighRes.png",
+  "title": "Tibians Quiz",
+  "description": "Teste seus conhecimentos neste quiz do clássico MMORPG da internet!",
   "questions": [
     {
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
