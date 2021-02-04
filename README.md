@@ -54,7 +54,7 @@ I learned how to work with states of **React** through **React hooks**, learned 
 
 ## Third class
 
-I improve understanding in one of principal themes of React: states management and components lifecycle. Change status and identify the cycle moment, with this was possible update every component, change the components on screen and add efects. I connect tools of React (hooks, components and JSX) to the modern JavaScript logic to load the questions and alternatives of my quiz.
+I improved understanding in one of principal themes of React: states management and components lifecycle. Change status and identify the cycle moment, with this was possible update every component, change the components on screen and add efects. I connect tools of React (hooks, components and JSX) to the modern JavaScript logic to load the questions and alternatives of my quiz.
 
 <details><summary><b>Detailed content of the third class</b></summary>
 
@@ -78,6 +78,36 @@ I improve understanding in one of principal themes of React: states management a
 
   </details>
 
+## Fourth class
+
+I finished the quiz page with all needed steps to play that: select the alternative, receive on-screen the feedback of right or wrong answer, a point counter and a result page. Over developing understand more about props behavior, like work with more than one instance of the same component on screen, develop the logical to capture clicks, treat the results and change components status each user interaction. How to propagante other quizzes on screen, start with Next.js tools to create endpoints and handle with requests and responses
+
+<details><summary><b>Detailed content of the fourth class</b></summary>
+
+- Develop the selection code to choose alternatives for each question
+
+- Statements vs expression
+
+- Learn more about props, like key
+
+- Handle with states and rendering the same component many times
+
+- Logic to select alternatives, enabling button to the next question (using states, HTML attributes and array index)
+
+- Counting logic of points with changing state
+
+- Update points with cycle of React updating
+
+- Show the results page with the sum of the points
+
+- Use the data atributte (data-*) from HTML to give alternatives style information to the components
+
+- Create lambda servers with Next.js to up a endpoint
+
+- Setting CORS configuration to allow requests do other quizzes
+
+</details>
+
 ### 💻 Stack
 
 - React
@@ -89,7 +119,7 @@ I improve understanding in one of principal themes of React: states management a
 
 ### Let's code! 🚀
 
-Made with care by **Brayan Farias**. Connect with me on [Linkedin!](https://www.linkedin.com/in/ricardoltt/)
+Made with enthusiasm by **Brayan Farias**. Connect with me on [Linkedin!](https://www.linkedin.com/in/ricardoltt/)
 
 ### Disclaimer 
 All contents and rights of [Tibia](https://www.tibia.com/news/?subtopic=latestnews) belongs to CipSoft GmbH.<br />
