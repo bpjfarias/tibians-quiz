@@ -54,7 +54,7 @@ I learned how to work with states of **React** through **React hooks**, learned 
 
 ## Third class
 
-I improved understanding in one of principal themes of React: states management and components lifecycle. Change status and identify the cycle moment, with this was possible update every component, change the components on screen and add efects. I connect tools of React (hooks, components and JSX) to the modern JavaScript logic to load the questions and alternatives of my quiz.
+I improved understanding in one of principal themes of React: **states management and components lifecycle**. Change status and identify the cycle moment, with this was possible update every component, change the components on screen and add efects. I connect tools of React (hooks, components and JSX) to the modern JavaScript logic to load the questions and alternatives of my quiz.
 
 <details><summary><b>Detailed content of the third class</b></summary>
 
@@ -80,7 +80,7 @@ I improved understanding in one of principal themes of React: states management 
 
 ## Fourth class
 
-I finished the quiz page with all needed steps to play that: select the alternative, receive on-screen the feedback of right or wrong answer, a point counter and a result page. Over developing understand more about props behavior, like work with more than one instance of the same component on screen, develop the logical to capture clicks, treat the results and change components status each user interaction. How to propagante other quizzes on screen, start with Next.js tools to create endpoints and handle with requests and responses
+I finished the quiz page with all needed steps to play that: select the alternative, receive on-screen the feedback of right or wrong answer, a point counter and a result page. Over developing understand more about **props behavior**, like work with more than one instance of the same component on screen, develop the logical to capture clicks, treat the results and change components status each user interaction. How to propagante other quizzes on screen, start with Next.js tools to **create endpoints and handle with requests and responses**.
 
 <details><summary><b>Detailed content of the fourth class</b></summary>
 
