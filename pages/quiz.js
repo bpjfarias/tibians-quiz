@@ -1,10 +1,9 @@
 import React from 'react';
 import db from '../db.json';
-import LoadingWidget from './src/components/LoadingWidget';
-import QuestionWidget from './src/components/QuestionWidget';
-import QuizBackground from './src/components/QuizBackground';
-import QuizContainer from './src/components/QuizContainer';
-
+import LoadingWidget from '../src/components/LoadingWidget';
+import QuestionWidget from '../src/components/QuestionWidget';
+import QuizBackground from '../src/components/QuizBackground';
+import QuizContainer from '../src/components/QuizContainer';
 
 export default function QuizPage() {
 

@@ -3,13 +3,13 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import db from '../db.json';
-import Footer from './src/components/Footer';
-import GitHubCorner from './src/components/GitHubCorner';
-import QuizBackground from './src/components/QuizBackground';
-import Widget from './src/components/Widget';
-import Input from './src/components/Input';
-import Button from './src/components/Button'
-import QuizContainer from './src/components/QuizContainer';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import QuizBackground from '../src/components/QuizBackground';
+import Widget from '../src/components/Widget';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button'
+import QuizContainer from '../src/components/QuizContainer';
 
 export default function Home() {
   const router = useRouter();

@@ -1,7 +1,8 @@
 import Widget from "../Widget";
 import Button from "../Button";
 
-export default function QuestionWidget({ question, totalQuestions,  questionIndex, onSubmit }) {
+export default function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit }) {
+  console.log(question.image)
   const questionId = `questionId__${questionIndex}`
   return (
     <Widget>
