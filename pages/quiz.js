@@ -14,11 +14,11 @@ export default function QuizPage() {
     QUIZ: 'QUIZ'
   }
 
+  const [screenState, setScreenState] = React.useState(screenStates.LOADING)
   const totalQuestions = db.questions.length  
   const [currentQuestion, setCurrentQuestion] = React.useState(0)
-  const question = db.questions[currentQuestion]
-
-  const [screenState, setScreenState] = React.useState(screenStates.LOADING)
+  const questionIndex = currentQuestion;
+  const question = db.questions[questionIndex]
 
   React.useEffect( () => {
     setTimeout(() => {
@@ -39,8 +39,8 @@ export default function QuizPage() {
           {screenState == screenStates.QUIZ && (
             <QuestionWidget
             question={question} 
+            questionIndex = {questionIndex}
             totalQuestions={totalQuestions}
-            currentQuestion = {currentQuestion}
             onSubmit={handleSubmitQuiz}
             />
           )}

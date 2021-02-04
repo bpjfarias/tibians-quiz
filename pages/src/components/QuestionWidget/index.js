@@ -1,12 +1,12 @@
 import Widget from "../Widget";
 import Button from "../Button";
 
-export default function QuestionWidget({ question, totalQuestions,  currentQuestion, onSubmit }) {
-  const questionId = `questionId__${currentQuestion}`
+export default function QuestionWidget({ question, totalQuestions,  questionIndex, onSubmit }) {
+  const questionId = `questionId__${questionIndex}`
   return (
     <Widget>
       <Widget.Header>
-        <h3> Pergunta {currentQuestion+1} de {totalQuestions}</h3>
+        <h3> Pergunta {questionIndex+1} de {totalQuestions}</h3>
       </Widget.Header>
 
       <img
