@@ -30,7 +30,7 @@ I started the project creating a home page using **React** and put it on-line wi
 
 ## Second class
 
-I learned how to work with states of **React** trought **React hooks**, learned what is a **SPA** (Single Page Application), created routes inside our application, used **ESLint** and evolved  components. 
+I learned how to work with states of **React** through **React hooks**, learned what is a **SPA** (Single Page Application), created routes inside our application, used **ESLint** and evolved  components. 
 
 <details><summary><b>Detailed content of the second class</b></summary>
 

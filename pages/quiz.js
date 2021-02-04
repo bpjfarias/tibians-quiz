@@ -1,6 +1,7 @@
 import React from 'react';
 import db from '../db.json';
 import LoadingWidget from '../src/components/LoadingWidget';
+import ResultWidget from '../src/components/ResultWidget';
 import QuestionWidget from '../src/components/QuestionWidget';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
@@ -13,7 +14,8 @@ export default function QuizPage() {
     QUIZ: 'QUIZ'
   }
 
-  const [screenState, setScreenState] = React.useState(screenStates.LOADING)
+  const [screenState, setScreenState] = React.useState(screenStates.QUIZ)
+  const [results, setResults] = React.useState([])
   const totalQuestions = db.questions.length  
   const [currentQuestion, setCurrentQuestion] = React.useState(0)
   const questionIndex = currentQuestion;
@@ -25,6 +27,12 @@ export default function QuizPage() {
     }, 1000)
   },[])
 
+  function addResultIntoResults(result){
+    setResults([
+      ...results,
+      result
+    ])
+  }
 
   function handleSubmitQuiz() {
     const nextQuestion = currentQuestion + 1
@@ -41,12 +49,16 @@ export default function QuizPage() {
             questionIndex = {questionIndex}
             totalQuestions={totalQuestions}
             onSubmit={handleSubmitQuiz}
+            addResultIntoResults={addResultIntoResults}
             />
           )}
 
         {screenState == screenStates.LOADING &&  <LoadingWidget />}
 
-        {screenState == screenStates.RESULT && <div>Aqui mostra o screenStates.RESULT</div>}
+        {screenState == screenStates.RESULT &&
+          <ResultWidget
+          results={results}
+          />}
            
       </QuizContainer>
     </QuizBackground>
