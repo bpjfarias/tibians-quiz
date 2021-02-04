@@ -26,7 +26,7 @@ I started the project creating a home page using **React** and put it on-line wi
 
 - Publish it on the Vercel
 
-  </details>
+ </details>
 
 ## Second class
 
@@ -49,6 +49,32 @@ I learned how to work with states of **React** trought **React hooks**, learned 
 - Give some data in URLs by `query params`
 
 - Use `next/router` to implement routes
+
+</details>
+
+## Third class
+
+I improve understanding in one of principal themes of React: states management and components lifecycle. Change status and identify the cycle moment, with this was possible update every component, change the components on screen and add efects. I connect tools of React (hooks, components and JSX) to the modern JavaScript logic to load the questions and alternatives of my quiz.
+
+<details><summary><b>Detailed content of the third class</b></summary>
+
+- Create more components
+
+- Work with components properties (props)
+
+- Ensure the properties type with prop-types lib
+
+- Create the quiz page and their components
+
+- Show questions and alternatives on screen from db.json file
+
+- Create forms to manage alternatives
+
+- Work with quiz components states to switch loadings, questions and the result.
+
+- Understand the React components lifecycle
+
+- Use useEffects() to add actions to the components of quiz page
 
   </details>
 
