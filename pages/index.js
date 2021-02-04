@@ -1,15 +1,14 @@
-/* eslint-disable linebreak-style */
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import db from '../db.json';
+import Button from '../src/components/Button';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
-import QuizBackground from '../src/components/QuizBackground';
-import Widget from '../src/components/Widget';
 import Input from '../src/components/Input';
-import Button from '../src/components/Button'
+import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
+import Widget from '../src/components/Widget';
 
 export default function Home() {
   const router = useRouter();
