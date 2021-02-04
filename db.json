@@ -6,20 +6,17 @@
   "questions": [
     {
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
+      "title": "Aqui fica a pergunta 1",
+      "description": "Aqui fica uma descrição da pergunta 1",
       "answer": 2,
-      "alternatives": [".elemento", "*elemento", "#elemento", "%elemento"]
+      "alternatives": ["Opção 1", "Opção 2", "Opção 3", "Opção 4"]
     },
     {
       "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "title": "Aqui fica a pergunta 2",
+      "description": "Aqui fica uma descrição da pergunta 1",
       "answer": 0,
-      "alternatives": [
-        "background: linear-gradient(#e66465, #9198e5);",
-        "background: gradient(#e66465, #9198e5);"
-      ]
+      "alternatives": ["Opção 1", "Opção 2", "Opção 3", "Opção 4"]
     }
   ],
   "external": [""],
