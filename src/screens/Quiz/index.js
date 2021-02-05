@@ -1,12 +1,11 @@
 import React from 'react';
-import db from '../db.json';
-import LoadingWidget from '../src/components/LoadingWidget';
-import ResultWidget from '../src/components/ResultWidget';
-import QuestionWidget from '../src/components/QuestionWidget';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
+import LoadingWidget from '../../components/LoadingWidget';
+import QuestionWidget from '../../components/QuestionWidget';
+import QuizBackground from '../../components/QuizBackground';
+import QuizContainer from '../../components/QuizContainer';
+import ResultWidget from '../../components/ResultWidget';
 
-export default function QuizPage() {
+export default function QuizPage( {externalQuestions, externalBackGround}) {
 
   const screenStates = {
     LOADING:'LOADING',
@@ -16,10 +15,10 @@ export default function QuizPage() {
 
   const [screenState, setScreenState] = React.useState(screenStates.QUIZ)
   const [results, setResults] = React.useState([])
-  const totalQuestions = db.questions.length  
+  const totalQuestions = externalQuestions.length  
   const [currentQuestion, setCurrentQuestion] = React.useState(0)
   const questionIndex = currentQuestion;
-  const question = db.questions[questionIndex]
+  const question = externalQuestions[questionIndex]
 
   React.useEffect( () => {
     setTimeout(() => {
@@ -40,7 +39,7 @@ export default function QuizPage() {
   }
   
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={externalBackGround}>
         <QuizContainer>
 
           {screenState == screenStates.QUIZ && (

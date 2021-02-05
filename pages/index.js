@@ -6,9 +6,11 @@ import Button from '../src/components/Button';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
+import Link from '../src/components/Link';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import Widget from '../src/components/Widget';
+import {motion} from 'framer-motion'
 
 export default function Home() {
   const router = useRouter();
@@ -20,7 +22,19 @@ export default function Home() {
         <title>Tibians Quiz</title>
       </Head>
       <QuizContainer>
-        <Widget>
+        <Widget
+          as={motion.section}
+          variants={{
+            show: { x: 0 },
+            hidden: { x: 1500 },
+          }}
+          initial="hidden"
+          animate="show"
+          transition={{
+            type: 'spring',
+            velocity: 5
+          }}
+        >
 
           <Widget.Header>
             <h1>{db.title}</h1>
@@ -34,12 +48,12 @@ export default function Home() {
             }}
             >
               <Input
-                name="nomeDoUsuario"
+                name='userName'
                 placeholder="Qual seu nome?"
                 onChange={(event) => setName(event.target.value)}
                 value={name}
               />
-              <Button type="submit" disabled={!name}>
+              <Button type="submit" disabled={name.length <= 3 }>
                 Boa sorte
                 {` ${name}`}
               </Button>
@@ -47,19 +61,54 @@ export default function Home() {
           </Widget.Content>
         </Widget>
 
-        <Widget>
+        <Widget
+          as={motion.section}
+          variants={{
+            show: { x: 0 },
+            hidden: { x: -2000 },
+          }}
+          initial="hidden"
+          animate="show"
+          transition={{
+            type: 'spring',
+            velocity: 5
+          }}
+        >
           <Widget.Header>
             <h1>Quizes da galera</h1>
           </Widget.Header>
 
           <Widget.Content>
-            <p>Em breve aqui aparecerão os quizes de quem também fez a semana da Alura!</p>
+            <ul>
+              {db.external.map((externalLink) => {
+                const [projectName, userName] =  externalLink
+                .replace(/\//g, '')
+                .replace('https:','')
+                .replace('.vercel.app','')
+                .split('.')
+                const listKey =`key__${projectName}`
+                return (
+                  <li
+                  key={listKey}
+                  >
+                    <Widget.Topic 
+                    as={Link}
+                    href={`/quiz/${projectName}.${userName}`}
+                    >
+                      {`${userName}/${projectName}`}
+                      </Widget.Topic>
+                  </li>
+                )
+              })}
+            </ul>
           </Widget.Content>
 
         </Widget>
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/bpjfarias" />
+      <GitHubCorner 
+      projectUrl="https://github.com/bpjfarias"
+       />
     </QuizBackground>
   );
 }

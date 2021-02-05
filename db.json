@@ -19,7 +19,10 @@
       "alternatives": ["Opção 1", "Opção 2", "Opção 3", "Opção 4"]
     }
   ],
-  "external": [""],
+  "external": [
+    "https://aluraquiz-css.omariosouto.vercel.app/",
+    "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
+  ],
   "theme": {
     "colors": {
       "primary": "#0d47a1",
