@@ -110,7 +110,7 @@ I finished the quiz page with all steps to play it: select the choice, receive o
 
 ## Fifth class
 
-I used Next.js features to allow others quizzes to show on my page without redirect to theirs own pages! I used the Framer Motion library to give some movements and transition to the components.
+I used Next.js features to allow others quizzes to show on my page **without redirect** to theirs own pages! I used the **Framer Motion library** to give some movements and transition to the components.
 
 <details><summary><b>Detailed content of the fifth class</b></summary>
 
