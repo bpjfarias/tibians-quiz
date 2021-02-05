@@ -1,6 +1,7 @@
 import Widget from "../Widget";
 import Button from "../Button";
 import AlternativesForm from '../AlternativesForm';
+import BackLinkArrow from '../BackLinkArrow/index.js'
 
 
 export default function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit, addResultIntoResults }) {
@@ -10,10 +11,12 @@ export default function QuestionWidget({ question, questionIndex, totalQuestions
   const [isQuestionSubmitted, setIsQuestionSubmitted] = React.useState(false)
   const hasAlternativeSelected = selectedAlternative !== undefined
   const TIMEOUT =  2000
+
   return (
     <Widget>
       <Widget.Header>
-        <h3> Pergunta {questionIndex+1} de {totalQuestions}</h3>
+        <BackLinkArrow href="/" />
+        <h3> {`Pergunta ${questionIndex+1} de ${totalQuestions}`}</h3>
       </Widget.Header>
 
       <img
