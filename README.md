@@ -54,7 +54,7 @@ I learned how to work with states of **React** through **React hooks**, learned 
 
 ## Third class
 
-I improved understanding in one of principal themes of React: **states management and components lifecycle**. Change status and identify the cycle moment, with this was possible update every component, change the components on screen and add efects. I connect tools of React (hooks, components and JSX) to the modern JavaScript logic to load the questions and alternatives of my quiz.
+I improved on React main themes: **states management and components lifecycle**. Change status and identify the cycle moment, with this was possible to update every component, change the components on screen and add efects. I connect React features (hooks, components and JSX) to the modern JavaScript logic to load the questions and choices of my quiz.
 
 <details><summary><b>Detailed content of the third class</b></summary>
 
@@ -66,9 +66,9 @@ I improved understanding in one of principal themes of React: **states managemen
 
 - Create the quiz page and their components
 
-- Show questions and alternatives on screen from db.json file
+- Show questions and choices on screen from db.json file
 
-- Create forms to manage alternatives
+- Create forms to manage choices
 
 - Work with quiz components states to switch loadings, questions and the result.
 
@@ -80,11 +80,11 @@ I improved understanding in one of principal themes of React: **states managemen
 
 ## Fourth class
 
-I finished the quiz page with all needed steps to play that: select the alternative, receive on-screen the feedback of right or wrong answer, a point counter and a result page. Over developing understand more about **props behavior**, like work with more than one instance of the same component on screen, develop the logical to capture clicks, treat the results and change components status each user interaction. How to propagante other quizzes on screen, start with Next.js tools to **create endpoints and handle with requests and responses**.
+I finished the quiz page with all steps to play it: select the choice, receive on-screen the feedback for right or wrong answer, a point counter and a result page. During development, I understood more about **props behavior**, like work with more than one instance of the same component on screen, develop the logical to capture clicks, treat the results and change components status for each user interaction. How to propagante other quizzes on screen, start with Next.js tools to **create endpoints and handle the requests and responses**.
 
 <details><summary><b>Detailed content of the fourth class</b></summary>
 
-- Develop the selection code to choose alternatives for each question
+- Develop the selection code to pick choices for each question
 
 - Statements vs expression
 
@@ -92,7 +92,7 @@ I finished the quiz page with all needed steps to play that: select the alternat
 
 - Handle with states and rendering the same component many times
 
-- Logic to select alternatives, enabling button to the next question (using states, HTML attributes and array index)
+- Logic to select choice, enabling button to the next question (using states, HTML attributes and array index)
 
 - Counting logic of points with changing state
 
@@ -100,7 +100,7 @@ I finished the quiz page with all needed steps to play that: select the alternat
 
 - Show the results page with the sum of the points
 
-- Use the data atributte (data-*) from HTML to give alternatives style information to the components
+- Use the data atributte (data-*) from HTML to give differents styles informations to the components
 
 - Create lambda servers with Next.js to up a endpoint
 
@@ -108,14 +108,42 @@ I finished the quiz page with all needed steps to play that: select the alternat
 
 </details>
 
-### 💻 Stack
+## Fifth class
+
+I used Next.js features to allow others quizzes to show on my page without redirect to theirs own pages! I used the Framer Motion library to give some movements and transition to the components.
+
+<details><summary><b>Detailed content of the fifth class</b></summary>
+
+- List other quizzes URLs from db.json file 
+
+- Reuse Widget component
+
+- Add hiperlink button for the others quizzes
+
+- Create routes using dinamic parameters with Next.js
+
+- Use SSR method optimization to create dinamic pages
+
+- Work with promises using Fetch method
+
+- Organize the project with screens folder to define pages layout
+
+- Give to the main page the external quizzes props
+
+- Use Framer Motion to handle the Widgets movements and transition
+
+</details>
+
+### 💻 Techonologies
 
 - React
 - Next.Js
-- Styled Components
 - JavaScript
+- Styled Components
 - ESLint
 - Vercel
+- Prop-types
+- Framer-motion
 
 ### Let's code! 🚀
 
