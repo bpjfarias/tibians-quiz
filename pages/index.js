@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -9,8 +10,9 @@ import Input from '../src/components/Input';
 import Link from '../src/components/Link';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
+import QuizLogo from '../src/components/QuizLogo';
 import Widget from '../src/components/Widget';
-import {motion} from 'framer-motion'
+
 
 export default function Home() {
   const router = useRouter();
@@ -19,9 +21,12 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title>Tibians Quiz</title>
+        <title>Tibians Quiz - Home</title>
       </Head>
       <QuizContainer>
+      <QuizLogo 
+      isTransitions= {true}
+      />
         <Widget
           as={motion.section}
           variants={{
@@ -104,7 +109,19 @@ export default function Home() {
           </Widget.Content>
 
         </Widget>
-        <Footer />
+        <Footer
+          as={motion.footer}
+          variants={{
+            show: { y: 0 },
+            hidden: { y: 1500 },
+          }}
+          initial="hidden"
+          animate="show"
+          transition={{
+            type: 'spring',
+            velocity: 5
+          }}
+        />
       </QuizContainer>
       <GitHubCorner 
       projectUrl="https://github.com/bpjfarias"
