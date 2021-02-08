@@ -36,6 +36,10 @@ export default function QuizPage() {
     ])
   }
 
+  function generateRandomNumber(){
+    return Math.floor(Math.random() * (11 - 0) + 0)
+  }
+
   function handleSubmitQuiz() {
     const nextQuestion = currentQuestion + 1
     nextQuestion < totalQuestions ? setCurrentQuestion(nextQuestion) : setScreenState(screenStates.RESULT)
@@ -57,7 +61,10 @@ export default function QuizPage() {
             addResultIntoResults={addResultIntoResults}
           />
         )}
-        {screenState == screenStates.LOADING && <LoadingWidget />}
+        {screenState == screenStates.LOADING && 
+        <LoadingWidget 
+        randomNumber={generateRandomNumber()}
+        />}
         {screenState == screenStates.RESULT &&
           <ResultWidget
             results={results}

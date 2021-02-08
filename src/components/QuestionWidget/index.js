@@ -10,7 +10,7 @@ export default function QuestionWidget({ question, questionIndex, totalQuestions
   const isCorrect = selectedAlternative == question.answer;
   const [isQuestionSubmitted, setIsQuestionSubmitted] = React.useState(false)
   const hasAlternativeSelected = selectedAlternative !== undefined
-  const TIMEOUT =  2000
+  const TIMEOUT =  1000
 
   return (
     <Widget>
@@ -49,7 +49,7 @@ export default function QuestionWidget({ question, questionIndex, totalQuestions
             const alternativeStatus = isCorrect ? 'SUCCESS': 'ERROR'
             const isRadioSelected = selectedAlternative == alternativeIndex
             return (
-              <Widget.Topic key={`key__${alternativeIndex}`}
+              <Widget.Topic key={`${questionIndex}key__${alternativeIndex}`}
               as="label" 
               htmlFor={alternativeId}
               data-selected={isRadioSelected}
@@ -61,7 +61,7 @@ export default function QuestionWidget({ question, questionIndex, totalQuestions
                   }}
                 id={alternativeId}
                 name={questionId}
-                type="radio"                
+                type="radio"
                 onChange={() => { setSelectedAlternative(alternativeIndex) }}
                 />
                 {alternative}
@@ -74,8 +74,6 @@ export default function QuestionWidget({ question, questionIndex, totalQuestions
           >
               Confirmar
           </Button>
-          {isQuestionSubmitted && isCorrect && <p>Voce acertou</p>}
-          {isQuestionSubmitted && !isCorrect && <p>Voce Errou</p>}
         </AlternativesForm>
       </Widget.Content>
     </Widget>
