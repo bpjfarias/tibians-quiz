@@ -92,8 +92,10 @@ Logo.propTypes = {
 };
 
 const QuizLogo = styled(Logo)`
-  margin: auto;
-  display: block;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   @media screen and (max-width: 500px) {
     margin: 0;
   }

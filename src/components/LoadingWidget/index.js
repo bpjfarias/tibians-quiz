@@ -25,12 +25,30 @@ const LoadingImages = [
     Slime_3x,
 ]
 
-export default function LoadingWidget({randomNumber}){
+function generateRandomNumber() {
+  const randomNumber = Math.floor(Math.random() * (11 - 0) + 0)
+  console.log(randomNumber)
+  return randomNumber;
+}
 
-    return (
-         <img 
-         align="center"
-         src={LoadingImages[randomNumber]}
-         alt="LoadingImage"/>
-          )
+export default function LoadingWidget(){
+
+  return (
+
+    <div 
+      style={{
+        width: "100%",
+        paddingTop: "45px",
+        margin: "auto",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+            <img
+            src={LoadingImages[generateRandomNumber()]}
+            alt="LoadingImage" />
+
+    </div>
+
+  )
 }

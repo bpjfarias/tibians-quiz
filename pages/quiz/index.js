@@ -22,54 +22,50 @@ export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0)
   const questionIndex = currentQuestion;
   const question = db.questions[questionIndex]
+  const [LoadingControl, setLoadingControl] = React.useState(false)
 
   React.useEffect(() => {
     setTimeout(() => {
-      setScreenState(screenStates.QUIZ)
+      setScreenState(screenStates.QUIZ);
     }, 1000)
   }, [])
 
-  function addResultIntoResults(result) {
-    setResults([
-      ...results,
-      result
-    ])
-  }
+function addResultIntoResults(result) {
+  setResults([
+    ...results,
+    result
+  ])
+}
 
-  function generateRandomNumber(){
-    return Math.floor(Math.random() * (11 - 0) + 0)
-  }
+function handleSubmitQuiz() {
+  const nextQuestion = currentQuestion + 1
+  nextQuestion < totalQuestions ? setCurrentQuestion(nextQuestion) : setScreenState(screenStates.RESULT)
+}
 
-  function handleSubmitQuiz() {
-    const nextQuestion = currentQuestion + 1
-    nextQuestion < totalQuestions ? setCurrentQuestion(nextQuestion) : setScreenState(screenStates.RESULT)
-  }
-
-  return (
-    <QuizBackground backgroundImage={db.bg}>
-      <Head>
-        <title>Tibians Quiz - {screenState} </title>
-      </Head>
-      <QuizContainer>
-      <QuizLogo />
-        {screenState == screenStates.QUIZ && (
-          <QuestionWidget
-            question={question}
-            questionIndex={questionIndex}
-            totalQuestions={totalQuestions}
-            onSubmit={handleSubmitQuiz}
-            addResultIntoResults={addResultIntoResults}
-          />
+return (
+  <QuizBackground backgroundImage={db.bg}>
+    <Head>
+      <title>Tibians Quiz - {screenState} </title>
+    </Head>
+    <QuizContainer>
+    <QuizLogo />
+      {!LoadingControl && screenState == screenStates.QUIZ && (
+        <QuestionWidget
+        question={question}
+        questionIndex={questionIndex}
+        totalQuestions={totalQuestions}
+        onSubmit={handleSubmitQuiz}
+        addResultIntoResults={addResultIntoResults}
+        setLoadingControl={setLoadingControl}
+        />
         )}
-        {screenState == screenStates.LOADING && 
-        <LoadingWidget 
-        randomNumber={generateRandomNumber()}
+      {!LoadingControl && screenState == screenStates.LOADING && <LoadingWidget />}
+      {LoadingControl && <LoadingWidget />}
+      {!LoadingControl && screenState == screenStates.RESULT &&
+        <ResultWidget
+          results={results}
         />}
-        {screenState == screenStates.RESULT &&
-          <ResultWidget
-            results={results}
-          />}
-      </QuizContainer>
-    </QuizBackground>
-  );
+    </QuizContainer>
+  </QuizBackground>
+);
 };
