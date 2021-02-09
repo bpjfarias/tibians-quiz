@@ -14,31 +14,10 @@ import QuizLogo from '../src/components/QuizLogo';
 import Widget from '../src/components/Widget';
 
 export default function Home() {
-  
+
   const router = useRouter();
 
   const [name, setName] = React.useState('');
-
-  const [response, setResponse] = React.useState({})
-
-  async function requestToGitTopics() {
-
-  const URL_TO_GET = 'https://api.github.com/search/repositories?q=topic:aluraquiz+topic:imersao-react+topic:alura'
-  
-  const myHeaders = new Headers()
-  myHeaders.append('Accept','application/vnd.github.v3+json')
-  
-  const myInit = {
-    method: 'GET',
-    headers: myHeaders
-  };
-
-  const myRequest = new Request(URL_TO_GET, myInit)
-
-  const response =  await fetch(myRequest)
-
-  setResponse(response)
-}
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -46,9 +25,9 @@ export default function Home() {
         <title>Tibians Quiz - Home</title>
       </Head>
       <QuizContainer>
-      <QuizLogo 
-      isTransitions= {true}
-      />
+        <QuizLogo
+          isTransitions={true}
+        />
         <Widget
           as={motion.section}
           variants={{
@@ -80,7 +59,7 @@ export default function Home() {
                 onChange={(event) => setName(event.target.value)}
                 value={name}
               />
-              <Button type="submit" disabled={name.length <= 3 }>
+              <Button type="submit" disabled={name.length <= 3}>
                 Boa sorte
                 {` ${name}`}
               </Button>
@@ -107,24 +86,24 @@ export default function Home() {
 
           <Widget.Content>
             <ul>
-              {db.external.map((externalLink) => {              
+            {db.external.map((externalLink) => {              
                 const [projectName, userName] =  externalLink
                 .replace(/\//g, '')
                 .replace('https:','')
                 .replace('.vercel.app','')
                 .split('.')
 
-                const listKey =`key__${projectName}`
+                const listKey = `key__${userName}`
                 return (
                   <li
-                  key={listKey}
+                    key={listKey}
                   >
-                    <Widget.Topic 
-                    as={Link}
-                    href={`/quiz/${projectName}.${userName}`}
+                    <Widget.Topic
+                      as={Link}
+                      href={`/quiz/${projectName}__${userName}`}
                     >
                       {`${userName}/${projectName}`}
-                      </Widget.Topic>
+                    </Widget.Topic>
                   </li>
                 )
               })}
@@ -146,9 +125,9 @@ export default function Home() {
           }}
         />
       </QuizContainer>
-      <GitHubCorner 
-      projectUrl="https://github.com/bpjfarias"
-       />
+      <GitHubCorner
+        projectUrl="https://github.com/bpjfarias"
+      />
     </QuizBackground>
   );
 }

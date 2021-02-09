@@ -18,7 +18,7 @@ export default function QuizzesFromPeople({externalDb}) {
 }
 
 export async function getServerSideProps(context) {
-    const [projectName, userName] = context.query.id.split('.')
+    const [projectName, userName] = context.query.id.split('__')
     const externalDb = await fetch(`https://${projectName}.${userName}.vercel.app/api/db`)
         .then((response) => {
             if (response.ok)

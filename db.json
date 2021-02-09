@@ -20,8 +20,9 @@
     }
   ],
   "external": [
-    "https://aluraquiz-css.omariosouto.vercel.app/",
-    "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
+    "https://1sec-quiz.victoroda.vercel.app/",
+    "https://pato-quiz-nextjs.theedouglasam.vercel.app/",
+    "https://harry-potter-quiz.brunogerbasi.vercel.app/"
   ],
   "theme": {
     "colors": {

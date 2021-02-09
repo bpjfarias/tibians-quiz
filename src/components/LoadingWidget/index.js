@@ -11,7 +11,9 @@ import OrcBerserker_3x from '../../../public/OrcBerserker_3x.gif'
 import Skeleton_3x from '../../../public/Skeleton_3x.gif'
 import Slime_3x from '../../../public/Slime_3x.gif'
 
-const LoadingImages = [
+export default function LoadingWidget(){
+
+  const LoadingImages = [
     BloodCrab_3x,
     BlueDjinn_3x,
     Bonelord_3x,
@@ -24,12 +26,10 @@ const LoadingImages = [
     Skeleton_3x,
     Slime_3x,
 ]
-
-function generateRandomNumber() {
-  return Math.floor(Math.random() * (11 - 0) + 0)
-}
-
-export default function LoadingWidget(){
+  
+  function generateRandomNumber() {
+    return Math.floor(Math.random() * (10 - 0) + 0)
+  }
 
   return (
 
