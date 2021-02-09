@@ -26,9 +26,7 @@ const LoadingImages = [
 ]
 
 function generateRandomNumber() {
-  const randomNumber = Math.floor(Math.random() * (11 - 0) + 0)
-  console.log(randomNumber)
-  return randomNumber;
+  return Math.floor(Math.random() * (11 - 0) + 0)
 }
 
 export default function LoadingWidget(){

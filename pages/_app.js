@@ -2,7 +2,6 @@ import Head from 'next/head';
 import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import db from '../db.json';
-import QuizLogo from '../src/components/QuizLogo';
 
 
 const GlobalStyle = createGlobalStyle`

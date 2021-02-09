@@ -13,10 +13,32 @@ import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
 import Widget from '../src/components/Widget';
 
-
 export default function Home() {
+  
   const router = useRouter();
+
   const [name, setName] = React.useState('');
+
+  const [response, setResponse] = React.useState({})
+
+  async function requestToGitTopics() {
+
+  const URL_TO_GET = 'https://api.github.com/search/repositories?q=topic:aluraquiz+topic:imersao-react+topic:alura'
+  
+  const myHeaders = new Headers()
+  myHeaders.append('Accept','application/vnd.github.v3+json')
+  
+  const myInit = {
+    method: 'GET',
+    headers: myHeaders
+  };
+
+  const myRequest = new Request(URL_TO_GET, myInit)
+
+  const response =  await fetch(myRequest)
+
+  setResponse(response)
+}
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -85,12 +107,13 @@ export default function Home() {
 
           <Widget.Content>
             <ul>
-              {db.external.map((externalLink) => {
+              {db.external.map((externalLink) => {              
                 const [projectName, userName] =  externalLink
                 .replace(/\//g, '')
                 .replace('https:','')
                 .replace('.vercel.app','')
                 .split('.')
+
                 const listKey =`key__${projectName}`
                 return (
                   <li
