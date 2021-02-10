@@ -1,19 +1,21 @@
-import React from 'react'
-import Widget from "../Widget"
-import PropTypes from 'prop-types'; 
-
+import PropTypes from 'prop-types';
+import React from 'react';
+import Widget from "../Widget";
 
 export default function ResultWidget({results}){
+
+    const rightQuestionsCounter = results.filter((x) => x == true).length
+
     return (
-      <Widget>
-          <Widget.Header>
-             Seu resultado!
+        <Widget>
+            <Widget.Header>
+                Seu resultado!
             </Widget.Header>
             <Widget.Content>
                 <p>
-                    {`Voce acertou ${results.filter((x) => x == true).length} perguntas`}
+                    {`Voce acertou ${rightQuestionsCounter} perguntas`}
                 </p>
-            </Widget.Content>
+            </Widget.Content>             
         </Widget>
     )
 }

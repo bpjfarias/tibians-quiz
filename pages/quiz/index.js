@@ -5,8 +5,9 @@ import LoadingWidget from '../../src/components/LoadingWidget';
 import QuestionWidget from '../../src/components/QuestionWidget';
 import QuizBackground from '../../src/components/QuizBackground';
 import QuizContainer from '../../src/components/QuizContainer';
-import ResultWidget from '../../src/components/ResultWidget';
 import QuizLogo from '../../src/components/QuizLogo';
+import ResultImageWidget from '../../src/components/ResultImageWidget';
+import ResultWidget from '../../src/components/ResultWidget';
 
 export default function QuizPage() {
 
@@ -30,42 +31,53 @@ export default function QuizPage() {
     }, 1000)
   }, [])
 
-function addResultIntoResults(result) {
-  setResults([
-    ...results,
-    result
-  ])
-}
+  function addResultIntoResults(result) {
+    setResults([
+      ...results,
+      result
+    ])
+  }
 
-function handleSubmitQuiz() {
-  const nextQuestion = currentQuestion + 1
-  nextQuestion < totalQuestions ? setCurrentQuestion(nextQuestion) : setScreenState(screenStates.RESULT)
-}
+  function checkResultsToChooseAnImage(results) {
+    const rightQuestionsCounter = results.filter((x) => x == true).length
 
-return (
-  <QuizBackground backgroundImage={db.bg}>
-    <Head>
-      <title>Tibians Quiz - {screenState} </title>
-    </Head>
-    <QuizContainer>
-    <QuizLogo />
-      {!LoadingControl && screenState == screenStates.QUIZ && (
-        <QuestionWidget
-        question={question}
-        questionIndex={questionIndex}
-        totalQuestions={totalQuestions}
-        onSubmit={handleSubmitQuiz}
-        addResultIntoResults={addResultIntoResults}
-        setLoadingControl={setLoadingControl}
-        />
+    return rightQuestionsCounter >= 6 ? 1 : 0
+
+  }
+
+  function handleSubmitQuiz() {
+    const nextQuestion = currentQuestion + 1
+    nextQuestion < totalQuestions ? setCurrentQuestion(nextQuestion) : setScreenState(screenStates.RESULT)
+  }
+
+  return (
+    <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Tibians Quiz - {screenState} </title>
+      </Head>
+      <QuizContainer>
+        <QuizLogo />
+        {!LoadingControl && screenState == screenStates.QUIZ && (
+          <QuestionWidget
+            question={question}
+            questionIndex={questionIndex}
+            totalQuestions={totalQuestions}
+            onSubmit={handleSubmitQuiz}
+            addResultIntoResults={addResultIntoResults}
+            setLoadingControl={setLoadingControl}
+          />
         )}
-      {!LoadingControl && screenState == screenStates.LOADING && <LoadingWidget />}
-      {LoadingControl && <LoadingWidget />}
-      {!LoadingControl && screenState == screenStates.RESULT &&
-        <ResultWidget
-          results={results}
-        />}
-    </QuizContainer>
-  </QuizBackground>
-);
+        {!LoadingControl && screenState == screenStates.LOADING && <LoadingWidget />}
+        {LoadingControl && <LoadingWidget />}
+        {!LoadingControl && screenState == screenStates.RESULT &&
+          <ResultWidget
+            results={results}
+          />}
+        {!LoadingControl && screenState == screenStates.RESULT &&
+          <ResultImageWidget
+            index={checkResultsToChooseAnImage(results)}
+          />}
+      </QuizContainer>
+    </QuizBackground>
+  );
 };

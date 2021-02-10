@@ -11,26 +11,25 @@ import OrcBerserker_3x from '../../../public/OrcBerserker_3x.gif'
 import Skeleton_3x from '../../../public/Skeleton_3x.gif'
 import Slime_3x from '../../../public/Slime_3x.gif'
 
-export default function LoadingWidget(){
-
-  const LoadingImages = [
-    BloodCrab_3x,
-    BlueDjinn_3x,
-    Bonelord_3x,
-    Cyclops_3x,
-    Demon_3x,
-    Dragon_3x,
-    Ferumbras_3x,
-    GiantSpider_3x,
-    OrcBerserker_3x,
-    Skeleton_3x,
-    Slime_3x,
+const LoadingImages = [
+  BloodCrab_3x,
+  BlueDjinn_3x,
+  Bonelord_3x,
+  Cyclops_3x,
+  Demon_3x,
+  Dragon_3x,
+  Ferumbras_3x,
+  GiantSpider_3x,
+  OrcBerserker_3x,
+  Skeleton_3x,
+  Slime_3x,
 ]
-  
-  function generateRandomNumber() {
-    return Math.floor(Math.random() * (10 - 0) + 0)
-  }
 
+function generateRandomNumber() {
+  return Math.floor(Math.random() * (10 - 0) + 0)
+}
+
+export default function LoadingWidget({index = generateRandomNumber() }){
   return (
 
     <div 
@@ -43,7 +42,7 @@ export default function LoadingWidget(){
       }}
     >
             <img
-            src={LoadingImages[generateRandomNumber()]}
+            src={LoadingImages[index]}
             alt="LoadingImage" />
 
     </div>

@@ -48,7 +48,7 @@ export default function   QuestionWidget({ setLoadingControl, question, question
 
               setTimeout(() =>{
                 setLoadingControl(false)
-              }, TIMEOUT+1000)
+              }, TIMEOUT+1500)
                              
             }}
           >
